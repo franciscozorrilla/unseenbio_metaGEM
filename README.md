@@ -8,11 +8,21 @@ Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, 
 
 ### Setup
 
-Obtain 4 main helper files from the metaGEM repo
+Obtain 4 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo
 * Snakefile: contains metaGEM workflow instructions.
-* config.yaml: config file used for easy set up and tweaking pipeline parameters.
-* cluster_config.json: config file used for easy job submissions to cluster.
+* config.yaml: config file used for set up and tweaking pipeline parameters.
+* cluster_config.json: config file used for job submissions to cluster.
 * metaGEM.sh: parser used for easier user interface with Snakefile.
+
+```
+Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS]
+Options:
+  -t, --task        Specify task to complete
+  -j, --nJobs       Specify number of jobs to run in parallel
+  -c, --nCores      Specify number of cores per job
+  -m, --mem         Specify memory in GB required for job
+  -h, --hours       Specify number of hours to allocated to job runtime
+```
 
 Load conda and activate environment:
 ```
