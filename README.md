@@ -9,6 +9,7 @@ Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, 
 ### Setup
 
 Organize paired end reads in subdirectories as shown below.
+
 ![Screenshot 2020-12-27 at 17 39 53](https://user-images.githubusercontent.com/35606471/103176555-90eb3900-486a-11eb-970d-4603a279f31f.png)
 
 ### Quality filtering
