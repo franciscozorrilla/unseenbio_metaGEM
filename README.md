@@ -78,5 +78,5 @@ Visualize assembly results:
 ```
 bash metaGEM.sh -t qfilterVis
 ```
-![Screenshot 2020-12-27 at 23 18 30](https://user-images.githubusercontent.com/35606471/103181540-f0147200-4899-11eb-9053-36f25ec3dccc.png)
+![Screenshot 2020-12-27 at 23 30 25](https://user-images.githubusercontent.com/35606471/103181656-85643600-489b-11eb-85cf-4a64c9d9b6ea.png)
 
