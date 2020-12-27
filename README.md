@@ -20,13 +20,14 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 
 ### 0. metaGEM setup
 
-Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo
+Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo:
 * Snakefile: contains metaGEM workflow instructions.
 * config.yaml: config file used for set up and tweaking pipeline parameters.
 * cluster_config.json: config file used for job submissions to cluster.
-* metaGEM.sh: parser used for easier user interface with Snakefile.
 * metaGEM.yml: conda environment recipie. 
+* metaGEM.sh: parser used for easier user interface with Snakefile.
 
+Parser usage:
 ```
 Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS]
 Options:
