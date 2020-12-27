@@ -29,6 +29,7 @@ Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorril
 
 Parser usage:
 ```
+Help: bash metaGEM.sh
 Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS]
 Options:
   -t, --task        Specify task to complete
