@@ -5,18 +5,18 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 
 ### metaGEM workflow
 
-* 0. metaGEM setup
-* 1. Quality filter reads (fastp)
-* 2. Assembly (megahit)
-* 3. Draft bin sets (CONCOCT,MaxBin2,MetaBAT2)
-* 4. Refine & reassemble bins (metaWRAP)
-* 5. Reconstruct genome-scale metabolic models (CarveMe)
-* 6. Species metabolic coupling analysis (SMETANA)
-* 7. Taxonomic assignment(GTDB-tk)
-* 8. Relative abundances (bwa)
-* 9. Pangenome analysis (roary)
-* 10. Growth rate estimation (GRiD)
-* 11. Eukaryotic draft bins (EukRep,EukCC)
+0. metaGEM setup
+1. Quality filter reads (fastp)
+2. Assembly (megahit)
+3. Draft bin sets (CONCOCT,MaxBin2,MetaBAT2)
+4. Refine & reassemble bins (metaWRAP)
+5. Reconstruct genome-scale metabolic models (CarveMe)
+6. Species metabolic coupling analysis (SMETANA)
+7. Taxonomic assignment(GTDB-tk)
+8. Relative abundances (bwa)
+9. Pangenome analysis (roary)
+10. Growth rate estimation (GRiD)
+11. Eukaryotic draft bins (EukRep,EukCC)
 
 ### 0. metaGEM setup
 
