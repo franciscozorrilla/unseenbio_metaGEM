@@ -72,3 +72,10 @@ Submit one assembly job per sample, with 48 cores and 250 GB RAM each, with a ma
 ```
 bash metaGEM.sh -t megahit -j 2 -c 48 -m 250 -h 100
 ```
+
+Visualize assembly results:
+```
+bash metaGEM.sh -t qfilterVis
+```
+![Screenshot 2020-12-27 at 23 18 30](https://user-images.githubusercontent.com/35606471/103181540-f0147200-4899-11eb-9053-36f25ec3dccc.png)
+
