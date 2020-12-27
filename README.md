@@ -8,13 +8,13 @@ Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, 
 
 ### Setup
 
-Obtain the 4 helper files from the metaGEM repo 
+Obtain 4 main helper files from the metaGEM repo
 * Snakefile: contains metaGEM workflow instructions.
 * config.yaml: config file used for easy set up and tweaking pipeline parameters.
 * cluster_config.json: config file used for easy job submissions to cluster.
 * metaGEM.sh: parser used for easier user interface with Snakefile.
 
-Load conda and activate environment
+Load conda and activate environment:
 ```
 module load Anaconda3
 source activate metaGEM
