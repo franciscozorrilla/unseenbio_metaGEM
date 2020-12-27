@@ -32,7 +32,7 @@ source activate metaGEM
 
 Organize paired end reads in subdirectories as shown below.
 
-![Screenshot 2020-12-27 at 17 39 53](https://user-images.githubusercontent.com/35606471/103176555-90eb3900-486a-11eb-970d-4603a279f31f.png)
+![Screenshot 2020-12-27 at 18 11 52](https://user-images.githubusercontent.com/35606471/103177075-15d85180-486f-11eb-9aa3-025b2931f0b5.png)
 
 ### Quality filtering
 
