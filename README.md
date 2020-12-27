@@ -36,9 +36,14 @@ Organize paired end reads in subdirectories as shown below.
 
 ### Quality filtering
 
-Submit quality filtering jobs:
+Submit one quality filtering job per sample, with 2 cores and 20 GB RAM each, with a maximum runtime of 2 hours:
 ```
 bash metaGEM.sh -t fastp -j 2 -c 2 -m 20 -h 2
 ```
 
 ### Assembly
+
+Submit one assembly job per sample, with 48 cores and 250 GB RAM each, with a maximum runtime of 100 hours:
+```
+bash metaGEM.sh -t megahit -j 2 -c 48 -m 250 -h 100
+```
