@@ -1,1 +1,2 @@
-# metaGEM workflow applied to two samples from unseenbio
+# unseenbio_metaGEM
+## metaGEM workflow applied to two samples from [unseen bio](https://unseenbio.com/)
