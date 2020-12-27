@@ -4,7 +4,7 @@
 Showcase how the metaGEM workflow can be used to explore the human gut microbiome using whole metagenome shotgun sequencing data obtained from unseen bio's at-home test kits.
 
 ### Raw data
-Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3. The paired end read sets have ~ 77 and 78 million reads respectively.
+Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3.
 
 ### Setup
 
@@ -40,6 +40,12 @@ Submit one quality filtering job per sample, with 2 cores and 20 GB RAM each, wi
 ```
 bash metaGEM.sh -t fastp -j 2 -c 2 -m 20 -h 2
 ```
+
+Visualize quality filtering results:
+```
+bash metaGEM.sh -t qfilterVis
+```
+![Screenshot 2020-12-27 at 18 44 38](https://user-images.githubusercontent.com/35606471/103177571-9dc05a80-4873-11eb-9f22-2972abff3081.png)
 
 ### Assembly
 
