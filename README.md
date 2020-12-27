@@ -36,4 +36,9 @@ Organize paired end reads in subdirectories as shown below.
 
 ### Quality filtering
 
+Submit quality filtering jobs:
+```
+bash metaGEM.sh -t fastp -j 2 -c 2 -m 20 -h 2
+```
+
 ### Assembly
