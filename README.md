@@ -1,7 +1,9 @@
 # [metaGEM](https://github.com/franciscozorrilla/metaGEM/) workflow applied to samples from [unseen bio](https://unseenbio.com/)
 
 ### Objective
-Showcase how the metaGEM workflow can be used to explore the human gut microbiome using whole metagenome shotgun sequencing data obtained from unseen bio's at-home test kits.
+Showcase how the metaGEM workflow can be used to explore the human gut microbiome using whole metagenome shotgun sequencing data obtained from unseen bio's at-home test kits. Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3.
+
+### metaGEM workflow
 
 0.metaGEM setup
 1.Quality filter reads (fastp)
@@ -16,16 +18,14 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 10.Growth rate estimation (GRiD)
 11.Eukaryotic draft bins (EukRep,EukCC)
 
-### Raw data
-Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3.
-
 ### 0. metaGEM setup
 
-Obtain 4 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo
+Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo
 * Snakefile: contains metaGEM workflow instructions.
 * config.yaml: config file used for set up and tweaking pipeline parameters.
 * cluster_config.json: config file used for job submissions to cluster.
 * metaGEM.sh: parser used for easier user interface with Snakefile.
+* metaGEM.yml: conda environment recipie. 
 
 ```
 Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS]
@@ -37,9 +37,14 @@ Options:
   -h, --hours       Specify number of hours to allocated to job runtime
 ```
 
-Load conda and activate environment:
+Create conda environment and install tools
 ```
 module load Anaconda3
+conda env create -f metaGEM.yml
+```
+
+Load conda and activate environment:
+```
 source activate metaGEM
 ```
 
