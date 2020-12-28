@@ -13,7 +13,7 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 5. Reconstruct genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) - [ ]
 6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [ ]
-8. Relative abundances with [bwa](https://github.com/lh3/bwa) - [ ]
+8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [ ]
 9. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
 10. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
@@ -57,7 +57,7 @@ Organize paired end reads in subdirectories as shown below.
 
 ![Screenshot 2020-12-27 at 18 14 41](https://user-images.githubusercontent.com/35606471/103177108-694a9f80-486f-11eb-8291-cc92dd6785db.png)
 
-### 1. Quality filtering short reads with fastp
+### 1. Quality filtering short reads with [fastp](https://github.com/OpenGene/fastp)
 
 Submit one quality filtering job per sample, with 2 cores and 20 GB RAM each, with a maximum runtime of 2 hours:
 ```
@@ -70,7 +70,7 @@ bash metaGEM.sh -t qfilterVis
 ```
 ![Screenshot 2020-12-28 at 14 55 37](https://user-images.githubusercontent.com/35606471/103222817-cb151300-491c-11eb-94bc-1f616d90f21d.png)
 
-### 2. Assembly of short reads with megahit
+### 2. Assembly of short reads with [megahit](https://github.com/voutcn/megahit)
 
 Submit one assembly job per sample, with 48 cores and 250 GB RAM each, with a maximum runtime of 100 hours:
 ```
@@ -84,7 +84,7 @@ bash metaGEM.sh -t qfilterVis
 ![Screenshot 2020-12-27 at 23 30 25](https://user-images.githubusercontent.com/35606471/103181656-85643600-489b-11eb-85cf-4a64c9d9b6ea.png)
 
 
-### 3. Generate draft bin sets with CONCOCT, MaxBin2, and MetaBAT2, with the help of bwa + samtools
+### 3. Generate draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT), [MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/), with the help of [bwa](https://github.com/lh3/bwa) + [samtools](https://github.com/samtools/samtools)
 
 Using bwa and samtools, cross map each set of paired end reads against each set of assembled contigs to obtain abundances/coverage of contigs across samples. This information will be used by binners to attain best performance:
 
