@@ -92,9 +92,9 @@ bash metaGEM.sh -t crossMap -j 2 -c 48 -m 250 -h 100
 Run each of the binners using contig coverage across samples:
 
 ```
-bash metaGEM.sh -t concoct -j 2 -c 48 -m 250 -h 100
-bash metaGEM.sh -t metabat -j 2 -c 48 -m 250 -h 100
-bash metaGEM.sh -t maxbin -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t concoct -j 2 -c 24 -m 100 -h 10
+bash metaGEM.sh -t metabat -j 2 -c 24 -m 100 -h 10
+bash metaGEM.sh -t maxbin -j 2 -c 24 -m 100 -h 10
 ```
 
 ### 4. Generate final bin sets using [metaWRAP](https://github.com/bxlab/metaWRAP) bin_refinement and bin_reassemble
