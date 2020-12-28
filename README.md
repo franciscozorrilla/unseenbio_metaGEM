@@ -70,6 +70,8 @@ bash metaGEM.sh -t qfilterVis
 ```
 ![Screenshot 2020-12-28 at 14 55 37](https://user-images.githubusercontent.com/35606471/103222817-cb151300-491c-11eb-94bc-1f616d90f21d.png)
 
+The above barplot shows that sample wgs_S2772Nr1 has ~4 billions base pairs, while sample wgs_S2772Nr3 has ~8 billion. Both samples have good quality scores, with approximately 98% of all reads/basepairs being retained after quality fitlering.
+
 ### 2. Assembly of short reads with [megahit](https://github.com/voutcn/megahit)
 
 Submit one assembly job per sample, with 24 cores and 120 GB RAM each, with a maximum runtime of 24 hours:
@@ -83,6 +85,7 @@ bash metaGEM.sh -t qfilterVis
 ```
 ![Screenshot 2020-12-27 at 23 30 25](https://user-images.githubusercontent.com/35606471/103181656-85643600-489b-11eb-85cf-4a64c9d9b6ea.png)
 
+The above barplots show that the assembly of sample wgs_S2772Nr1 contains ~324 million base pairs across ~56 thousand contigs (average of ~5.8 kbp/contig), while sample wgs_S2772Nr3 contains ~172 million base pairs across ~35 thousand contigs (average of ~4.9 kbp/contig). These contigs should bin nicely.
 
 ### 3. Generate draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT), [MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/), with the help of [bwa](https://github.com/lh3/bwa) + [samtools](https://github.com/samtools/samtools)
 
