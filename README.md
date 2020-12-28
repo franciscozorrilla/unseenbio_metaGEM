@@ -108,7 +108,12 @@ bash metaGEM.sh -t maxbin -j 2 -c 24 -m 80 -h 10
 It is recommended to install metaWRAP in its own isolated conda environment. This can be done using conda install or based on the metaWRAP.yml conda recipie file found in the metaGEM repo:
 
 ```
+# Install directly from conda
+conda create --name metawrap-env --channel ursky metawrap-mg=1.3.2
+
+# Install from conda recipie 
 conda env create -f metaWRAP_env.yml
+
 source activate metawrap
 ```
 
