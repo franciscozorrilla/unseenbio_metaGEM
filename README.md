@@ -83,6 +83,47 @@ bash metaGEM.sh -t qfilterVis
 
 ### 3. Generate draft bin sets with CONCOCT, MaxBin2, and MetaBAT2, with the help of bwa + samtools
 
+Using bwa and samtools, cross map each set of paired end reads against each set of assembled contigs to obtain abundances/coverage of contigs across samples. This information will be used by binners to attain best performance:
+
 ```
 bash metaGEM.sh -t crossMap -j 2 -c 48 -m 250 -h 100
 ```
+
+Run each of the binners using contig coverage across samples:
+
+```
+bash metaGEM.sh -t concoct -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t metabat -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t maxbin -j 2 -c 48 -m 250 -h 100
+```
+
+### 4. Generate final bin sets using [metaWRAP](https://github.com/bxlab/metaWRAP) bin_refinement and bin_reassemble
+
+It is recommended to install metaWRAP in its own isolated conda environment. This can be done using conda install or based on the metaWRAP.yml conda recipie file found in the metaGEM repo:
+
+```
+conda env create -f metaWRAP_env.yml
+source activate metawrap
+```
+
+Refine & reassembled bin sets:
+
+```
+bash metaGEM.sh -t binRefine -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t binReassemble -j 2 -c 48 -m 250 -h 100
+```
+
+### 5. Reconstruct genome scale metabolic models using CarveMe
+
+Run CarveMe:
+
+```
+bash metaGEM.sh -t carveme -j 2 -c 2 -m 4 -h 2
+```
+
+Evaluate models using memote:
+
+```
+bash metaGEM.sh -t memote -j 2 -c 4 -m 8 -h 2
+```
+
