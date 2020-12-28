@@ -72,9 +72,9 @@ bash metaGEM.sh -t qfilterVis
 
 ### 2. Assembly of short reads with [megahit](https://github.com/voutcn/megahit)
 
-Submit one assembly job per sample, with 48 cores and 250 GB RAM each, with a maximum runtime of 100 hours:
+Submit one assembly job per sample, with 24 cores and 120 GB RAM each, with a maximum runtime of 24 hours:
 ```
-bash metaGEM.sh -t megahit -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t megahit -j 2 -c 24 -m 120 -h 24
 ```
 
 Visualize assembly results:
@@ -86,18 +86,18 @@ bash metaGEM.sh -t qfilterVis
 
 ### 3. Generate draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT), [MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/), with the help of [bwa](https://github.com/lh3/bwa) + [samtools](https://github.com/samtools/samtools)
 
-Using bwa and samtools, cross map each set of paired end reads against each set of assembled contigs to obtain abundances/coverage of contigs across samples. This information will be used by binners to attain best performance:
+Using bwa and samtools, cross map each set of paired end reads against each set of assembled contigs to obtain abundances/coverage of contigs across samples. This information will be used by binners to attain best performance. Submit one job per sample, with 24 cores and 120 GB RAM each, with a maximum runtime of 24 hours:
 
 ```
-bash metaGEM.sh -t crossMap -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t crossMap -j 2 -c 24 -m 120 -h 24
 ```
 
 Run each of the binners using contig coverage across samples:
 
 ```
-bash metaGEM.sh -t concoct -j 2 -c 24 -m 100 -h 10
-bash metaGEM.sh -t metabat -j 2 -c 24 -m 100 -h 10
-bash metaGEM.sh -t maxbin -j 2 -c 24 -m 100 -h 10
+bash metaGEM.sh -t concoct -j 2 -c 24 -m 80 -h 10
+bash metaGEM.sh -t metabat -j 2 -c 24 -m 80 -h 10
+bash metaGEM.sh -t maxbin -j 2 -c 24 -m 80 -h 10
 ```
 
 ### 4. Generate final bin sets using [metaWRAP](https://github.com/bxlab/metaWRAP) bin_refinement and bin_reassemble
@@ -112,8 +112,8 @@ source activate metawrap
 Refine & reassembled bin sets:
 
 ```
-bash metaGEM.sh -t binRefine -j 2 -c 48 -m 250 -h 100
-bash metaGEM.sh -t binReassemble -j 2 -c 48 -m 250 -h 100
+bash metaGEM.sh -t binRefine -j 2 -c 24 -m 150 -h 24
+bash metaGEM.sh -t binReassemble -j 2 -c 24 -m 150 -h 24
 ```
 
 ### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
