@@ -18,6 +18,9 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 10. Growth rate estimation (GRiD) - [ ]
 11. Eukaryotic draft bins (EukRep,EukCC) - [ ]
 
+### Hardware
+The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
+
 ### 0. metaGEM setup
 
 Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo:
