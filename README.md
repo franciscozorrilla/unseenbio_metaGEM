@@ -6,17 +6,17 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 ### metaGEM workflow
 
 0. metaGEM setup - [x]
-1. Quality filter reads ([fastp](https://github.com/OpenGene/fastp)) - [x]
-2. Assembly ([megahit](https://github.com/voutcn/megahit)) - [x]
-3. Draft bin sets ([CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/),[MetaBAT2](https://sourceforge.net/projects/maxbin2/)) - [ ]
-4. Refine & reassemble bins ([metaWRAP](https://github.com/bxlab/metaWRAP)) - [ ]
-5. Reconstruct genome-scale metabolic models ([CarveMe](https://github.com/cdanielmachado/carveme)) - [ ]
-6. Species metabolic coupling analysis ([SMETANA](https://github.com/cdanielmachado/smetana)) - [ ]
-7. Taxonomic assignment ([GTDB-tk](https://github.com/Ecogenomics/GTDBTk)) - [ ]
-8. Relative abundances ([bwa](https://github.com/lh3/bwa)) - [ ]
-9. Pangenome analysis ([roary](https://github.com/sanger-pathogens/Roary)) - [ ]
-10. Growth rate estimation ([GRiD](https://github.com/ohlab/GRiD)) - [ ]
-11. Eukaryotic draft bins ([EukRep](https://github.com/patrickwest/EukRep),[EukCC](https://github.com/Finn-Lab/EukCC)) - [ ]
+1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp) - [x]
+2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
+3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/),[MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [ ]
+4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [ ]
+5. Reconstruct genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) - [ ]
+6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
+7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [ ]
+8. Relative abundances with [bwa](https://github.com/lh3/bwa) - [ ]
+9. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
+10. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
+11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
 
 ### Hardware
 The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
