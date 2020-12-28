@@ -111,10 +111,10 @@ It is recommended to install metaWRAP in its own isolated conda environment. Thi
 # Install directly from conda
 conda create --name metawrap-env --channel ursky metawrap-mg=1.3.2
 
-# Install from conda recipie 
+# Alternatively install from conda recipie 
 conda env create -f metaWRAP_env.yml
 
-source activate metawrap
+source activate metawrap-env
 ```
 
 Refine & reassembled bin sets:
