@@ -118,6 +118,8 @@ bash metaGEM.sh -t binReassemble -j 2 -c 48 -m 250 -h 100
 
 ### 5. Reconstruct genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme)
 
+Although most of the CarveMe dependencies are installed in the metaGEM conda environment using the metaGEM conda recipie, the CPLEX solver requires users to register with IBM to obtain a [free academic license](https://community.ibm.com/community/user/datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students).
+
 Run CarveMe:
 
 ```
