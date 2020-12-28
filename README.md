@@ -10,7 +10,7 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
 3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/),[MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [in progress]
 4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [ ]
-5. Reconstruct genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) - [ ]
+5. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [ ]
 6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [ ]
 8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [ ]
@@ -116,7 +116,7 @@ bash metaGEM.sh -t binRefine -j 2 -c 48 -m 250 -h 100
 bash metaGEM.sh -t binReassemble -j 2 -c 48 -m 250 -h 100
 ```
 
-### 5. Reconstruct genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme)
+### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
 
 Although most of the CarveMe dependencies are installed in the metaGEM conda environment using the metaGEM conda recipie, the CPLEX solver requires users to register with IBM to obtain a [free academic license](https://community.ibm.com/community/user/datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students).
 
