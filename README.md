@@ -8,7 +8,7 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 0. metaGEM setup - [x]
 1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp) - [x]
 2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
-3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/),[MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [in progress]
+3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [in progress]
 4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [ ]
 5. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [ ]
 6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
