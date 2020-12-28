@@ -65,7 +65,7 @@ Visualize quality filtering results:
 ```
 bash metaGEM.sh -t qfilterVis
 ```
-![Screenshot 2020-12-27 at 18 44 38](https://user-images.githubusercontent.com/35606471/103177571-9dc05a80-4873-11eb-9f22-2972abff3081.png)
+![Screenshot 2020-12-28 at 14 55 37](https://user-images.githubusercontent.com/35606471/103222817-cb151300-491c-11eb-94bc-1f616d90f21d.png)
 
 ### 2. Assembly of short reads with megahit
 
