@@ -80,3 +80,9 @@ bash metaGEM.sh -t qfilterVis
 ```
 ![Screenshot 2020-12-27 at 23 30 25](https://user-images.githubusercontent.com/35606471/103181656-85643600-489b-11eb-85cf-4a64c9d9b6ea.png)
 
+
+### 3. Generate draft bin sets with CONCOCT, MaxBin2, and MetaBAT2, with the help of bwa + samtools
+
+```
+bash metaGEM.sh -t crossMap -j 2 -c 48 -m 250 -h 100
+```
