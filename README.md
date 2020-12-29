@@ -134,7 +134,7 @@ bash metaGEM.sh -t binningVis
 
 ![Screenshot 2020-12-29 at 13 15 15](https://user-images.githubusercontent.com/35606471/103286338-eb55d800-49d7-11eb-8d38-c10046b708f8.png)
 
-As can be seen .. 
+The above figure shows that sample wgs_S2772Nr1 yielded a total of 88 refined and reassembled bins, while sample wgs_S2772Nr1 yielded 47. Although CONCOCT tends to outperform the other 2 binners in terms of number of bins generated (particularly so when there are more samples avialable to exploit contig coverage information), in this case MetaBAT2 generated the most bins. This highlights the strength and felxibility of the metaGEM binning implementation, where draft bin sets from multiple binners are refined and reassembled to obtain the best possible bins (average completeness 86.5% & average contamination 1.2%) instead of relying on a single binning approach. Indeed, CONCOCT tends to generate bins with higher completion (average completeness 89.2% & average contamination 1.9%) while MetaBAT2 tends to generate bins with lower contamination (average completeness 83.4% & average contamination 1.6%). Although MaxBin2 generated more bins than shown in the figure above, most of them did not meet the medium quality criteria of >50% completeness & <5% contamination due to high contamination. Furthermore, metaWRAP reassembled bins improve the contiguity of bins (average size 2.45 Mbp & average contigs	161.9) compared to CONCOCT (2.45 Mbp	& 287.5 contigs) or MetaBAT2 (2.38 Mbp &	167.5 contigs).
 
 ### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
 
