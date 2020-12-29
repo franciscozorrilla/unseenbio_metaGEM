@@ -140,13 +140,19 @@ The above figure shows that sample wgs_S2772Nr1 yielded a total of 88 refined an
 
 Although most of the CarveMe dependencies are installed in the metaGEM conda environment using the metaGEM conda recipie, the CPLEX solver requires users to register with IBM to obtain a [free academic license](https://community.ibm.com/community/user/datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students).
 
-Run CarveMe:
+Let's extract the ORF annotated protein bins from the metaWRAP reassembly output and dump them into a single folder for easy parallel job submission:
+
+```
+bash metaGEM.sh -t extractProteinBins
+```
+
+The models will be gapfilled on complete media by default, but this can be easily tweaked in the config.yaml file. Let's run CarveMe on the generated protein bins:
 
 ```
 bash metaGEM.sh -t carveme -j 2 -c 2 -m 4 -h 2
 ```
 
-Evaluate models using memote:
+After the models are generated we can evaluate them using memote:
 
 ```
 bash metaGEM.sh -t memote -j 2 -c 4 -m 8 -h 2
