@@ -10,8 +10,8 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
 3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [x]
 4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [x]
-5. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [in progress]
-6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
+5. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [x]
+6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [in progress]
 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [ ]
 8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [ ]
 9. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
@@ -159,3 +159,4 @@ After the models are generated we can evaluate them using memote:
 bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
 ```
 
+### 6. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
