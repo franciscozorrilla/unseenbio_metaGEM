@@ -53,7 +53,7 @@ Load conda and activate environment:
 source activate metaGEM
 ```
 
-Organize paired end reads in subdirectories as shown below.
+Organize paired end reads in subdirectories within the `dataset` folder as shown below. metaGEM will read in the sample IDs based on subfolders present in the `dataset` folder and provide these to the Snakefile to use as wildcards for job submissions.
 
 ![Screenshot 2020-12-27 at 18 14 41](https://user-images.githubusercontent.com/35606471/103177108-694a9f80-486f-11eb-8291-cc92dd6785db.png)
 
