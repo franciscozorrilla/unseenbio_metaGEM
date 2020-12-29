@@ -119,7 +119,7 @@ conda env create -f metaWRAP_env.yml
 source activate metawrap-env
 ```
 
-Refine & reassembled bin sets:
+Refine & reassemble bin sets:
 
 ```
 bash metaGEM.sh -t binRefine -j 2 -c 24 -m 150 -h 24
@@ -134,7 +134,7 @@ bash metaGEM.sh -t binningVis
 
 ![Screenshot 2020-12-29 at 13 15 15](https://user-images.githubusercontent.com/35606471/103286338-eb55d800-49d7-11eb-8d38-c10046b708f8.png)
 
-The above figure shows that sample wgs_S2772Nr1 yielded a total of 88 refined and reassembled bins, while sample wgs_S2772Nr1 yielded 47. Although CONCOCT tends to outperform MetaBAT2 and MaxBin2 in terms of number of bins generated (particularly so when there are more samples available to exploit contig coverage information), in this case MetaBAT2 generated the most bins. This highlights the strength and felxibility of the metaGEM binning implementation, where draft bin sets from multiple binners are refined and reassembled to obtain the best possible bins (average completeness 86.5% & average contamination 1.2%) instead of relying on a single binning approach. Indeed, CONCOCT tends to generate bins with higher completion (average completeness 89.2% & average contamination 1.9%) while MetaBAT2 tends to generate bins with lower contamination (average completeness 83.4% & average contamination 1.6%). Although MaxBin2 generated more bins than shown in the figure above, most of them did not meet the medium quality criteria of >50% completeness & <5% contamination due to high contamination. Furthermore, metaWRAP reassembled bins improve the contiguity of bins (average size 2.45 Mbp & average contigs	161.9) compared to CONCOCT (2.45 Mbp	& 287.5 contigs) or MetaBAT2 (2.38 Mbp &	167.5 contigs).
+We can see that samples wgs_S2772Nr1 and wgs_S2772Nr1 yield a 88 and 47 refined and reassembled bins respectively, for a total of 135 bins. Although CONCOCT tends to outperform MetaBAT2 and MaxBin2 in terms of number of bins generated (particularly so when there are more samples available to exploit contig coverage information), in this case MetaBAT2 generated the most bins. This highlights the strength and felxibility of the metaGEM binning implementation, where draft bin sets from multiple binners are refined and reassembled to obtain the best possible bins (average completeness 86.5% & average contamination 1.2%) instead of relying on a single binning approach. Indeed, CONCOCT tends to generate bins with higher completion (average completeness 89.2% & average contamination 1.9%) while MetaBAT2 tends to generate bins with lower contamination (average completeness 83.4% & average contamination 1.6%). Although MaxBin2 generated more bins than shown in the figure above, most of them did not meet the medium quality criteria of >50% completeness & <5% contamination due to high contamination. Furthermore, metaWRAP reassembled bins improve the contiguity of bins (average size 2.45 Mbp & average contigs	161.9) compared to CONCOCT (average size 2.45 Mbp	& 287.5 contigs on average) or MetaBAT2 (average size 2.38 Mbp &	167.5 contigs on average).
 
 ### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
 
@@ -146,7 +146,8 @@ Let's extract the ORF annotated protein bins from the metaWRAP reassembly output
 bash metaGEM.sh -t extractProteinBins
 ```
 
-The models will be gapfilled on complete media by default, but this can be easily tweaked in the config.yaml file. Let's run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the protein_bins folder,i.e. the location where extractProteinBins deposits the protein bins. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
+The models will be gapfilled on complete media by default, but this can be easily tweaked in the `config.yaml` file. 
+Let's now run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the `protein_bins` folder,i.e. the location where the  `extractProteinBins` rule deposits the protein bin files. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
 
 ```
 bash metaGEM.sh -t carveme -j 135 -c 4 -m 20 -h 4
