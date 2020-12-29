@@ -146,8 +146,7 @@ Let's extract the ORF annotated protein bins from the metaWRAP reassembly output
 bash metaGEM.sh -t extractProteinBins
 ```
 
-The models will be gapfilled on complete media by default, but this can be easily tweaked in the `config.yaml` file. 
-Let's now run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the `protein_bins` folder,i.e. the location where the  `extractProteinBins` rule deposits the protein bin files. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
+The models will be gapfilled on complete media by default, but this can be easily tweaked in the `config.yaml` file. It is also possible to add custom media recipies to the `media_db.tsv` file, which uses BiGG database metabolite IDs. Let's now run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the `protein_bins` folder,i.e. the location where the  `extractProteinBins` rule deposits the protein bin files. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
 
 ```
 bash metaGEM.sh -t carveme -j 135 -c 4 -m 20 -h 4
@@ -159,4 +158,16 @@ After the models are generated we can evaluate them using memote:
 bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
 ```
 
-### 6. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana) - [ ]
+### 6. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana)
+
+First let's organize our models into sample specific sub-directories for easy job submission:
+
+```
+bash metaGEM.sh -t organizeGEMs
+```
+
+We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series).
+
+```
+bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
+```
