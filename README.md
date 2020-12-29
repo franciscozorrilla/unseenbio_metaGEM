@@ -103,6 +103,8 @@ bash metaGEM.sh -t metabat -j 2 -c 24 -m 80 -h 10
 bash metaGEM.sh -t maxbin -j 2 -c 24 -m 80 -h 10
 ```
 
+We will visualize the output of individual binners after refinement and reassembly.
+
 ### 4. Generate final bin sets using [metaWRAP](https://github.com/bxlab/metaWRAP) bin_refinement and bin_reassemble
 
 It is recommended to install metaWRAP in its own isolated conda environment. This can be done using conda install or based on the metaWRAP.yml conda recipie file found in the metaGEM repo:
@@ -123,6 +125,16 @@ Refine & reassembled bin sets:
 bash metaGEM.sh -t binRefine -j 2 -c 24 -m 150 -h 24
 bash metaGEM.sh -t binReassemble -j 2 -c 24 -m 150 -h 24
 ```
+
+Visualize binning output:
+
+```
+bash metaGEM.sh -t binningVis
+```
+
+![Screenshot 2020-12-29 at 12 39 25](https://user-images.githubusercontent.com/35606471/103284371-ff4b0b00-49d2-11eb-99ea-9003ac91ec78.png)
+
+As can be seen .. 
 
 ### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
 
