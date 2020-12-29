@@ -155,6 +155,6 @@ bash metaGEM.sh -t carveme -j 135 -c 4 -m 20 -h 4
 After the models are generated we can evaluate them using memote:
 
 ```
-bash metaGEM.sh -t memote -j 2 -c 4 -m 8 -h 2
+bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
 ```
 
