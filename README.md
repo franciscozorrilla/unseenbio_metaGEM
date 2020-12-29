@@ -171,3 +171,23 @@ We can easily configure simulation media for computational experiments by modify
 ```
 bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 ```
+
+### Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
+
+First lets extract our DNA bins from the metaWRAP reassembly output:
+
+```
+bash metGEM.sh -t extractDnaBins
+```
+
+Run GTDB-tk for taxonomic classification:
+
+```
+bash metaGEM.sh -t gtdbtk -j 2 -c 24 -m 80 -h 12
+```
+
+### Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
+
+```
+bash metaGEM.sh -t abundance -j 2 -c 24 -m 80 -h 12
+```
