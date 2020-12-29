@@ -132,7 +132,7 @@ Visualize binning output:
 bash metaGEM.sh -t binningVis
 ```
 
-![Screenshot 2020-12-29 at 12 39 25](https://user-images.githubusercontent.com/35606471/103284371-ff4b0b00-49d2-11eb-99ea-9003ac91ec78.png)
+![Screenshot 2020-12-29 at 13 15 15](https://user-images.githubusercontent.com/35606471/103286338-eb55d800-49d7-11eb-8d38-c10046b708f8.png)
 
 As can be seen .. 
 
