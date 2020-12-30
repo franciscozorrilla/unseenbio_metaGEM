@@ -172,6 +172,8 @@ We can easily configure simulation media for computational experiments by modify
 bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 ```
 
+We will visualize interaction networks after assigning taxonomy and calculating relative abundances.
+
 ### 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
 
 First lets extract our DNA bins from the metaWRAP reassembly output:
