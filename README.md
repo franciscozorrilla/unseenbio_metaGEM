@@ -14,8 +14,8 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [in progress]
 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [in progress]
 8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [in progress]
-9. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
-10. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
+9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
+10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
 
 ### Hardware
@@ -191,3 +191,13 @@ bash metaGEM.sh -t gtdbtk -j 2 -c 24 -m 80 -h 12
 ```
 bash metaGEM.sh -t abundance -j 2 -c 24 -m 80 -h 12
 ```
+
+### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
+
+
+
+### 10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary)
+
+
+
+### 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC)
