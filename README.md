@@ -194,6 +194,15 @@ bash metaGEM.sh -t gtdbtk -j 2 -c 24 -m 80 -h 12
 bash metaGEM.sh -t abundance -j 2 -c 24 -m 80 -h 12
 ```
 
+Let's visualize the taxonomy and relative abundances:
+
+```
+bash metaGEM.sh -t compositionVis
+```
+
+![Screenshot 2020-12-30 at 21 29 39](https://user-images.githubusercontent.com/35606471/103382242-2b0ae580-4ae6-11eb-8050-9c884a602489.png)
+
+
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
 
