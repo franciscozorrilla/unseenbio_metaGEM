@@ -200,7 +200,7 @@ Let's visualize the taxonomy and relative abundances:
 bash metaGEM.sh -t compositionVis
 ```
 
-![Screenshot 2020-12-30 at 21 29 39](https://user-images.githubusercontent.com/35606471/103382242-2b0ae580-4ae6-11eb-8050-9c884a602489.png)
+![Screenshot 2020-12-30 at 21 32 09](https://user-images.githubusercontent.com/35606471/103382320-876e0500-4ae6-11eb-857a-236cdb94bca3.png)
 
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
