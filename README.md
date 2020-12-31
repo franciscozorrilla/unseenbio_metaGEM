@@ -202,6 +202,28 @@ bash metaGEM.sh -t compositionVis
 
 ![Screenshot 2020-12-30 at 21 32 09](https://user-images.githubusercontent.com/35606471/103382320-876e0500-4ae6-11eb-857a-236cdb94bca3.png)
 
+We can also do some additional manual analysis in R to check how well correlated the abundances of individual species are between samples:
+
+```
+taxab %>% select(user_genome,sample,species,rel_ab) %>% 
+  group_by(species) %>% 
+  mutate(count=n()) %>% 
+  filter(count==2) %>% 
+  select(-count,-user_genome) %>% 
+  pivot_wider(values_from = rel_ab,names_from = sample) -> scatter_dat
+
+rval=cor(scatter_dat$wgs_S2772Nr1,scatter_dat$wgs_S2772Nr3)
+lm_fit = summary(lm(wgs_S2772Nr1~wgs_S2772Nr3,data=scatter_dat))
+pval=lm_fit$coefficients[8]
+
+ggplot(scatter_dat,aes(x=wgs_S2772Nr1,y=wgs_S2772Nr3)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  annotate("text", label = paste0("Pearson's r = ",signif(rval,digits = 4)), x = 0.015, y = 0.07,size=5) +
+  annotate("text", label = paste0("p-value = ",signif(pval,digits = 4)), x = 0.015, y = 0.06,size=5)
+```
+
+![Screenshot 2020-12-31 at 15 37 10](https://user-images.githubusercontent.com/35606471/103416327-124e0e80-4b7e-11eb-885f-8d7ef24cb3ad.png)
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
