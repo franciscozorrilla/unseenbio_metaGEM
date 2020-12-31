@@ -149,6 +149,7 @@ Run GTDB-tk for taxonomic classification:
 ```
 bash metaGEM.sh -t gtdbtk -j 2 -c 24 -m 80 -h 12
 ```
+We will visualize taxonomic annotations after calculating relative abundances.
 
 ### 6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
 
