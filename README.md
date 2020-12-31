@@ -212,6 +212,14 @@ After the models are generated we can evaluate them using memote:
 bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
 ```
 
+Although memote generates detailed reports for each model, which can also be summarized and analyzed using the [script](https://github.com/biosustain/memote-meta-study) `cli.py`. We can quickly visualize the number of metabolites, genes, and reactions with metaGEM:
+
+```
+bash metaGEM.sh -t modelVis
+```
+
+![Screenshot 2020-12-31 at 18 28 11](https://user-images.githubusercontent.com/35606471/103421830-4b927880-4b96-11eb-88f8-297588eb866a.png)
+
 ### 8. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana)
 
 First let's organize our models into sample specific sub-directories for easy job submission:
