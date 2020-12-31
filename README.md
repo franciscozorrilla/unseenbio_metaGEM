@@ -165,6 +165,8 @@ bash metaGEM.sh -t compositionVis
 
 ![Screenshot 2020-12-30 at 21 32 09](https://user-images.githubusercontent.com/35606471/103382320-876e0500-4ae6-11eb-857a-236cdb94bca3.png)
 
+Excluded from the figure above are the relative abundances of genomes with undefined species-level taxonomy, accounting for 24.9% and 12.7% of the relative abundances of samples wgs_S2772Nr1 and wgs_S2772Nr3.
+
 We can also do some additional manual analysis in R to check how well correlated the abundances of individual species are between samples:
 
 ```
