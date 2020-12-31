@@ -10,10 +10,10 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
 3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [x]
 4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [x]
-5. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [x]
-6. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [in progress]
-7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [x]
-8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [x]
+5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [x]
+6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [x]
+7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [x]
+8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [in progress]
 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
 10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
@@ -136,45 +136,7 @@ bash metaGEM.sh -t binningVis
 
 We can see that samples wgs_S2772Nr1 and wgs_S2772Nr1 yield a 88 and 47 refined and reassembled bins respectively, for a total of 135 bins. Although CONCOCT tends to outperform MetaBAT2 and MaxBin2 in terms of number of bins generated (particularly so when there are more samples available to exploit contig coverage information), in this case MetaBAT2 generated the most bins. This highlights the strength and felxibility of the metaGEM binning implementation, where draft bin sets from multiple binners are refined and reassembled to obtain the best possible bins (average completeness 86.5% & average contamination 1.2%) instead of relying on a single binning approach. Indeed, CONCOCT tends to generate bins with higher completion (average completeness 89.2% & average contamination 1.9%) while MetaBAT2 tends to generate bins with lower contamination (average completeness 83.4% & average contamination 1.6%). Although MaxBin2 generated more bins than shown in the figure above, most of them did not meet the medium quality criteria of >50% completeness & <5% contamination due to high contamination. Furthermore, metaWRAP reassembled bins improve the contiguity of bins (average size 2.45 Mbp & average contigs	161.9) compared to CONCOCT (average size 2.45 Mbp	& 287.5 contigs on average) or MetaBAT2 (average size 2.38 Mbp &	167.5 contigs on average).
 
-### 5. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
-
-Although most of the CarveMe dependencies are installed in the metaGEM conda environment using the metaGEM conda recipie, the CPLEX solver requires users to register with IBM to obtain a [free academic license](https://community.ibm.com/community/user/datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students).
-
-Let's extract the ORF annotated protein bins from the metaWRAP reassembly output and dump them into a single folder for easy parallel job submission:
-
-```
-bash metaGEM.sh -t extractProteinBins
-```
-
-The models will be gapfilled on complete media by default, but this can be easily tweaked in the `config.yaml` file. It is also possible to add custom media recipies to the `media_db.tsv` file, which uses BiGG database metabolite IDs. Let's now run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the `protein_bins` folder,i.e. the location where the  `extractProteinBins` rule deposits the protein bin files. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
-
-```
-bash metaGEM.sh -t carveme -j 135 -c 4 -m 20 -h 4
-```
-
-After the models are generated we can evaluate them using memote:
-
-```
-bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
-```
-
-### 6. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana)
-
-First let's organize our models into sample specific sub-directories for easy job submission:
-
-```
-bash metaGEM.sh -t organizeGEMs
-```
-
-We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series).
-
-```
-bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
-```
-
-We will visualize interaction networks after assigning taxonomy and calculating relative abundances.
-
-### 7. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
+### 5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
 
 First lets extract our DNA bins from the metaWRAP reassembly output:
 
@@ -188,7 +150,7 @@ Run GTDB-tk for taxonomic classification:
 bash metaGEM.sh -t gtdbtk -j 2 -c 24 -m 80 -h 12
 ```
 
-### 8. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
+### 6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
 
 ```
 bash metaGEM.sh -t abundance -j 2 -c 24 -m 80 -h 12
@@ -224,6 +186,42 @@ ggplot(scatter_dat,aes(x=wgs_S2772Nr1,y=wgs_S2772Nr3)) +
 ```
 
 ![Screenshot 2020-12-31 at 15 37 10](https://user-images.githubusercontent.com/35606471/103416327-124e0e80-4b7e-11eb-885f-8d7ef24cb3ad.png)
+
+### 7. Reconstruct and evaluate genome scale metabolic models using [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
+
+Although most of the CarveMe dependencies are installed in the metaGEM conda environment using the metaGEM conda recipie, the CPLEX solver requires users to register with IBM to obtain a [free academic license](https://community.ibm.com/community/user/datascience/blogs/xavier-nodet1/2020/07/09/cplex-free-for-students).
+
+Let's extract the ORF annotated protein bins from the metaWRAP reassembly output and dump them into a single folder for easy parallel job submission:
+
+```
+bash metaGEM.sh -t extractProteinBins
+```
+
+The models will be gapfilled on complete media by default, but this can be easily tweaked in the `config.yaml` file. It is also possible to add custom media recipies to the `media_db.tsv` file, which uses BiGG database metabolite IDs. Let's now run CarveMe on the generated protein bins. Note that metaGEM will read MAG IDs from the `protein_bins` folder,i.e. the location where the  `extractProteinBins` rule deposits the protein bin files. In this case we will submit 135 jobs (one per MAG) with 4 cores and 20 GB RAM each, and a maximum runtime of 4 hours:
+
+```
+bash metaGEM.sh -t carveme -j 135 -c 4 -m 20 -h 4
+```
+
+After the models are generated we can evaluate them using memote:
+
+```
+bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
+```
+
+### 8. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana)
+
+First let's organize our models into sample specific sub-directories for easy job submission:
+
+```
+bash metaGEM.sh -t organizeGEMs
+```
+
+We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series).
+
+```
+bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
+```
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
