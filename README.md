@@ -18,14 +18,6 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
 
-## Please cite
-
-```
-metaGEM: reconstruction of genome scale metabolic models directly from metagenomes
-Francisco Zorrilla, Kiran R. Patil, Aleksej Zelezniak
-bioRxiv 2020.12.31.424982; doi: https://doi.org/10.1101/2020.12.31.424982 
-```
-
 ### Hardware
 The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
 
@@ -251,3 +243,11 @@ bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 
 
 ### 11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC)
+
+## Please cite
+
+```
+metaGEM: reconstruction of genome scale metabolic models directly from metagenomes
+Francisco Zorrilla, Kiran R. Patil, Aleksej Zelezniak
+bioRxiv 2020.12.31.424982; doi: https://doi.org/10.1101/2020.12.31.424982 
+```
