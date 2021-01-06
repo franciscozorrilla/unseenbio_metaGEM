@@ -218,11 +218,13 @@ Memote generates detailed reports for each model, which can also be summarized a
 bash metaGEM.sh -t modelVis
 ```
 
+![Screenshot 2020-12-31 at 18 28 11](https://user-images.githubusercontent.com/35606471/103421830-4b927880-4b96-11eb-88f8-297588eb866a.png)
+
+
 The models have similar distributions of metabolites, reactions, and genes as compared to other models in our [publication](https://doi.org/10.1101/2020.12.31.424982 ).
+
 ![Screenshot 2021-01-06 at 18 43 27](https://user-images.githubusercontent.com/35606471/103807997-3793be80-504f-11eb-9b0c-bfb895fd32ba.png)
 
-
-![Screenshot 2020-12-31 at 18 28 11](https://user-images.githubusercontent.com/35606471/103421830-4b927880-4b96-11eb-88f8-297588eb866a.png)
 
 ### 8. Community simulations with [SMETANA](https://github.com/cdanielmachado/smetana)
 
