@@ -212,7 +212,7 @@ After the models are generated we can evaluate them using memote:
 bash metaGEM.sh -t memote -j 135 -c 4 -m 20 -h 2
 ```
 
-Although memote generates detailed reports for each model, which can also be summarized and analyzed using the [script](https://github.com/biosustain/memote-meta-study) `cli.py`. We can quickly visualize the number of metabolites, genes, and reactions with metaGEM:
+Memote generates detailed reports for each model, which can also be summarized and analyzed using the [script](https://github.com/biosustain/memote-meta-study) `cli.py`. We can quickly visualize the number of metabolites, genes, and reactions of the models with metaGEM:
 
 ```
 bash metaGEM.sh -t modelVis
