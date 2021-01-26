@@ -6,17 +6,17 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 ### metaGEM workflow
 
 0. metaGEM setup - [x]
-1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp) - [x]
-2. Assembly with [megahit](https://github.com/voutcn/megahit) - [x]
-3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/) - [x]
-4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP) - [x]
-5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk) - [x]
-6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools) - [x]
-7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote) - [x]
-8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana) - [in progress]
-9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD) - [ ]
-10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary) - [ ]
-11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC) - [ ]
+1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp)
+2. Assembly with [megahit](https://github.com/voutcn/megahit)
+3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/)
+4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP)
+5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
+6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
+7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
+8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana)
+9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
+10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary)
+11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC)
 
 ### Hardware
 The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
