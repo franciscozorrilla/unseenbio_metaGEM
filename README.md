@@ -5,7 +5,7 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 
 ### metaGEM workflow
 
-0. metaGEM setup - [x]
+0. metaGEM setup
 1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp)
 2. Assembly with [megahit](https://github.com/voutcn/megahit)
 3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/)
