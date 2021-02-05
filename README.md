@@ -250,6 +250,8 @@ Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can 
 
 ![smetana_plot1](https://user-images.githubusercontent.com/35606471/107064724-c709ca00-67d3-11eb-8772-bb658efc858a.png)
 
+As expected, we see that tryptophan is a commonly exchanged compound between gut microbes and has a wide distribution of SMETANA scores.
+
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
 
