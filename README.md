@@ -234,6 +234,8 @@ First let's organize our models into sample specific sub-directories for easy jo
 bash metaGEM.sh -t organizeGEMs
 ```
 
+The SMETANA algorithm calculates species coupling scores (SCS), metabolite uptake scores (MUS), and metabolite production scores (MPS), which are multiplied to obtain a SMETANA score for each possible interaction between every species pair. For more information about the implementation and interpretation of SMETANA simulations please refer to the [original paper](https://www.pnas.org/content/112/20/6449).
+
 We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series). 
 
 In this demo we will set up the same computational experiment as in the [metaGEM paper](https://www.biorxiv.org/content/10.1101/2020.12.31.424982v2.full), where the models are gapfilled on complete media (M3) and simulated in media without aromatic amino acids (M11). The media compositions were provided by the authors of [this paper](https://www.nature.com/articles/s41564-018-0123-9), and are summarized in subfigure 1d:
@@ -244,7 +246,9 @@ In this demo we will set up the same computational experiment as in the [metaGEM
 bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 ```
 
+Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can start by plotting boxplots of the most commonly exchanged compounds within the community:
 
+![Screenshot 2021-02-05 at 16 45 09](https://user-images.githubusercontent.com/35606471/107062791-94f76880-67d1-11eb-9c0b-556083cb3132.png)
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
