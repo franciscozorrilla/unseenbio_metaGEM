@@ -254,7 +254,7 @@ As expected, we see that tryptophan, tyrosine, and phenylalanine are exchanged w
 
 ![don_rec_plot](https://user-images.githubusercontent.com/35606471/107070062-b0b33c80-67da-11eb-9a6d-77b6002f7453.png)
 
-The top subplot in the figure above suggests that *Parasutterella excrementihominis* and *Agathobaculum butyriciproducens* are key donor species, even though they account for 0.61% and 0.97% of the community relative abundance, respectively. On the other hand, the bottom subplot suggests that *Faecalicatena torques* and *Bacteroides salyersiae* are the most heavily dependant on other community members.
+The top subplot in the figure above suggests that *Parasutterella excrementihominis* and *Agathobaculum butyriciproducens* are key donor species, even though they account for 0.61% and 0.97% of the community relative abundance, respectively. On the other hand, the bottom subplot suggests that *Faecalicatena torques* and *Bacteroides salyersiae* are the most heavily dependant on other community members. Interestingly, we also see that *Faecalibacterium prausnitzii K*, the most abundant species in the community, is completely dependant on *Agathobaculum butyriciproducens* for hydrogen sulfide (i.e. SMETANA score equals 1 for this interaction).
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
