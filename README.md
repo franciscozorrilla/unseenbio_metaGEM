@@ -249,6 +249,7 @@ bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can start by plotting boxplots of the most commonly exchanged compounds within the community:
 
 ![Screenshot 2021-02-05 at 16 58 06](https://user-images.githubusercontent.com/35606471/107064379-5793da80-67d3-11eb-8390-5eff8c0304b2.png)
+![smetana_plot1](https://user-images.githubusercontent.com/35606471/107064724-c709ca00-67d3-11eb-8772-bb658efc858a.png)
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
