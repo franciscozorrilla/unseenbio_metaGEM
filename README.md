@@ -252,6 +252,10 @@ Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can 
 
 As expected we see that tryptophan, tyrosine, and phenylalanine are exchanged between within this community of gut microbes.
 
+We can also group SMETANA scores by donor and receiver to identify keystone species:
+
+![don_rec_plot](https://user-images.githubusercontent.com/35606471/107070062-b0b33c80-67da-11eb-9a6d-77b6002f7453.png)
+
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
 
