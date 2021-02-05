@@ -250,11 +250,11 @@ Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can 
 
 ![smetana_plot1](https://user-images.githubusercontent.com/35606471/107069103-5d8cba00-67d9-11eb-8950-d7a6ee7fbd77.png)
 
-As expected we see that tryptophan, tyrosine, and phenylalanine are exchanged between within this community of gut microbes.
-
-We can also group SMETANA scores by donor and receiver to identify keystone species:
+As expected, we see that tryptophan, tyrosine, and phenylalanine are exchanged within this community of gut microbes. We can also group SMETANA scores by donor and receiver to identify keystone species:
 
 ![don_rec_plot](https://user-images.githubusercontent.com/35606471/107070062-b0b33c80-67da-11eb-9a6d-77b6002f7453.png)
+
+The top subplot in the figure above suggests that *Parasutterella excrementihominis* and *Agathobaculum butyriciproducens* are key donor species, even though they account for 0.61% and 0.97% of the community relative abundance, respectively. On the other hand, the bottom subplot suggests that *Faecalicatena torques* and *Bacteroides salyersiae* are the most heavily dependant on other community members.
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
