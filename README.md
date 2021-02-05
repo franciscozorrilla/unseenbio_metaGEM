@@ -234,13 +234,17 @@ First let's organize our models into sample specific sub-directories for easy jo
 bash metaGEM.sh -t organizeGEMs
 ```
 
-We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series). In this demo we will set up the same (computational) experiment as in the [metaGEM paper](https://www.biorxiv.org/content/10.1101/2020.12.31.424982v2.full), where the models are gapfilled on complete media (M3) and simulated in media without aromatic amino acids (M11). The media compositions were provided by the authors of [this paper](https://www.nature.com/articles/s41564-018-0123-9), and are summarized in subfigure 1d:
+We can easily configure simulation media for computational experiments by modifying the `config.yaml` file. By default, metaGEM will simulate the communities in all media present in the base `media_db.tsv` file. Again, one could create custom simulation media by expanding the `media_db.tsv` file based on BiGG database metabolite IDs. Beware of the fact that large communities may require long runtimes to complete, especially if many simulation media are provided (community simulations are run per media in series). 
+
+In this demo we will set up the same computational experiment as in the [metaGEM paper](https://www.biorxiv.org/content/10.1101/2020.12.31.424982v2.full), where the models are gapfilled on complete media (M3) and simulated in media without aromatic amino acids (M11). The media compositions were provided by the authors of [this paper](https://www.nature.com/articles/s41564-018-0123-9), and are summarized in subfigure 1d:
 
 ![](https://user-images.githubusercontent.com/35606471/105162180-2f855580-5b0a-11eb-824b-5b30f10d66cd.png)
 
 ```
 bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 ```
+
+
 
 ### 9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
 
