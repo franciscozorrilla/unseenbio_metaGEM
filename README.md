@@ -14,9 +14,6 @@ Showcase how the metaGEM workflow can be used to explore the human gut microbiom
 6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
 7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
 8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana)
-9. Growth rate estimation with [GRiD](https://github.com/ohlab/GRiD)
-10. Pangenome analysis with [roary](https://github.com/sanger-pathogens/Roary)
-11. Eukaryotic draft bins with [EukRep](https://github.com/patrickwest/EukRep) and [EukCC](https://github.com/Finn-Lab/EukCC)
 
 ### Hardware
 The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
