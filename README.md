@@ -23,34 +23,33 @@ The workflow was executed on the European Molecular Biology Laboratory (EMBL) hi
 
 ### 0. metaGEM setup
 
-Obtain 5 main helper files from the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo:
-* metaGEM_env.yml: conda environment recipie.
-* Snakefile: contains metaGEM workflow instructions.
-* metaGEM.sh: parser used for easier user interface with Snakefile.
-* config.yaml: file used for set up and tweaking pipeline parameters.
-* cluster_config.json: file used for job submissions to cluster.
+Clone the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo and run automated setup script:
+
+```
+git clone https://github.com/franciscozorrilla/metaGEM.git
+cd metaGEM
+bash env_setup.sh
+```
+
+Load conda and activate environment:
+```
+module load anaconda3 # The exact module name will depend on the version installed on your cluster
+source activate metaGEM
+```
+
+Please refer to the [setup page in the metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki/metaGEM-setup) for further documentation.
 
 Parser usage:
 ```
 Help: bash metaGEM.sh
-Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS]
+Usage: bash metaGEM.sh [-t TASK] [-j NUMBER OF JOBS] [-c ALLOCATED CORES] [-m ALLOCATED GB MEMORY] [-h ALLOCATED HOURS] [-l]
 Options:
   -t, --task        Specify task to complete
   -j, --nJobs       Specify number of jobs to run in parallel
   -c, --nCores      Specify number of cores per job
   -m, --mem         Specify memory in GB required for job
   -h, --hours       Specify number of hours to allocated to job runtime
-```
-
-Create conda environment and install tools
-```
-module load Anaconda3
-conda env create -f metaGEM.yml
-```
-
-Load conda and activate environment:
-```
-source activate metaGEM
+  -l, --local       Run jobs on local machine for non-cluster usage
 ```
 
 Organize paired end reads in subdirectories within the `dataset` folder as shown below. metaGEM will read in the sample IDs based on subfolders present in the `dataset` folder and provide these to the Snakefile to use as wildcards for job submissions.
