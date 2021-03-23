@@ -37,7 +37,7 @@ module load anaconda3 # The exact module name will depend on the version install
 source activate metaGEM
 ```
 
-Please refer to the [setup page in the metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki/metaGEM-setup) for further documentation.
+Please refer to the [setup page in the metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki/Quickstart) for further documentation.
 
 Parser usage:
 ```
