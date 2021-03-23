@@ -6,22 +6,7 @@ Please refer to the [metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/
 ### Objective
 Showcase how the metaGEM workflow can be used to explore the human gut microbiome using whole metagenome shotgun sequencing data obtained from unseen bio's at-home test kits. Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3.
 
-### metaGEM workflow
-
-0. metaGEM setup
-1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp)
-2. Assembly with [megahit](https://github.com/voutcn/megahit)
-3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/)
-4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP)
-5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
-6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
-7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
-8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana)
-
-### Hardware
-The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
-
-### 0. metaGEM setup
+### metaGEM setup
 
 Clone the [metaGEM](https://github.com/franciscozorrilla/metaGEM/) repo and run automated setup script:
 
@@ -52,11 +37,25 @@ Options:
   -l, --local       Run jobs on local machine for non-cluster usage
 ```
 
+### Hardware
+The workflow was executed on the European Molecular Biology Laboratory (EMBL) high performance computing cluster.
+
+### metaGEM workflow
+
+1. Quality filter reads with [fastp](https://github.com/OpenGene/fastp)
+2. Assembly with [megahit](https://github.com/voutcn/megahit)
+3. Draft bin sets with [CONCOCT](https://github.com/BinPro/CONCOCT),[MaxBin2](https://sourceforge.net/projects/maxbin2/), and [MetaBAT2](https://sourceforge.net/projects/maxbin2/)
+4. Refine & reassemble bins with [metaWRAP](https://github.com/bxlab/metaWRAP)
+5. Taxonomic assignment with [GTDB-tk](https://github.com/Ecogenomics/GTDBTk)
+6. Relative abundances with [bwa](https://github.com/lh3/bwa) and [samtools](https://github.com/samtools/samtools)
+7. Reconstruct & evaluate genome-scale metabolic models with [CarveMe](https://github.com/cdanielmachado/carveme) and [memote](https://github.com/opencobra/memote)
+8. Species metabolic coupling analysis with [SMETANA](https://github.com/cdanielmachado/smetana)
+
+### 1. Quality filtering short reads with [fastp](https://github.com/OpenGene/fastp)
+
 Organize paired end reads in subdirectories within the `dataset` folder as shown below. metaGEM will read in the sample IDs based on subfolders present in the `dataset` folder and provide these to the Snakefile to use as wildcards for job submissions.
 
 ![Screenshot 2020-12-27 at 18 14 41](https://user-images.githubusercontent.com/35606471/103177108-694a9f80-486f-11eb-8291-cc92dd6785db.png)
-
-### 1. Quality filtering short reads with [fastp](https://github.com/OpenGene/fastp)
 
 Submit one quality filtering job per sample, with 2 cores and 20 GB RAM each, with a maximum runtime of 2 hours:
 ```
