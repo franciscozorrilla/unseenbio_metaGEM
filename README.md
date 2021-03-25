@@ -19,7 +19,7 @@ bash env_setup.sh
 Load conda and activate environment:
 ```
 module load anaconda3 # The exact module name will depend on the version installed on your cluster
-source activate metaGEM
+source activate metagem
 ```
 
 Please refer to the [setup page in the metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki/Quickstart) for further documentation.
