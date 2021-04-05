@@ -79,7 +79,7 @@ bash metaGEM.sh -t megahit -j 2 -c 24 -m 120 -h 24
 
 Visualize assembly results:
 ```
-bash metaGEM.sh -t qfilterVis
+bash metaGEM.sh -t assemblyVis
 ```
 ![Screenshot 2020-12-27 at 23 30 25](https://user-images.githubusercontent.com/35606471/103181656-85643600-489b-11eb-85cf-4a64c9d9b6ea.png)
 
