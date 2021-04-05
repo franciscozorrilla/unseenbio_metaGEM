@@ -244,6 +244,21 @@ In this demo we will set up the same computational experiment as in the [metaGEM
 bash metaGEM.sh -t smetana -j 2 -c 24 -m 40 -h 24
 ```
 
+The SMETANA output file contains predicted metabolic interactions between members of the simulated community:
+
+```
+community	medium	receiver	donor	compound	scs	mus	mps	smetana
+all	M11	ERR260137_bin.14.p	ERR260137_bin.10.p	M_ala__D_e	1	0.04	1	0.04
+all	M11	ERR260137_bin.14.p	ERR260137_bin.10.p	M_udcpdp_e	1	0.15	1	0.15
+all	M11	ERR260137_bin.14.p	ERR260137_bin.11.p	M_ala__D_e	0.05555555555555555	0.04	1	0.0022222222222222222
+all	M11	ERR260137_bin.14.p	ERR260137_bin.11.p	M_coa_e	0.05555555555555555	0.69	1	0.03833333333333333
+all	M11	ERR260137_bin.14.p	ERR260137_bin.11.p	M_uaagmda_e	0.05555555555555555	0.26	1	0.014444444444444444
+all	M11	ERR260137_bin.14.p	ERR260137_bin.11.p	M_udcpdp_e	0.05555555555555555	0.15	1	0.008333333333333333
+all	M11	ERR260137_bin.14.p	ERR260137_bin.12.p	M_5dglcn_e	0.05555555555555555	0.04	1	0.0022222222222222222
+all	M11	ERR260137_bin.14.p	ERR260137_bin.12.p	M_ala__D_e	0.05555555555555555	0.04	1	0.0022222222222222222
+all	M11	ERR260137_bin.14.p	ERR260137_bin.12.p	M_dtmp_e	0.05555555555555555	0.03	1	0.0016666666666666666
+```
+
 Let's visualize the SMETANA simulation results from sample wgs_S2772Nr3. We can start by plotting boxplots of the most commonly exchanged compounds within the community:
 
 ![smetana_plot1](https://user-images.githubusercontent.com/35606471/107069103-5d8cba00-67d9-11eb-8950-d7a6ee7fbd77.png)
