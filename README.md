@@ -1,7 +1,7 @@
 # [metaGEM](https://github.com/franciscozorrilla/metaGEM/) workflow applied to samples from [unseen bio](https://unseenbio.com/)
 
 ### Objective
-Showcase how the metaGEM workflow can be used to predict metabolic interactions directly from metagenomic data from your own gut microbiome. Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3. You can find the predicted interactions under the `SMETANA` folder or by clicking [here](https://github.com/franciscozorrilla/unseenbio_metaGEM/blob/main/SMETANA/wgs_S2772Nr3_detailed.tsv).
+Showcase how the metaGEM workflow can be used to predict metabolic interactions directly from metagenomic data from your own gut microbiome. Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3. You can find the predicted interactions under the `SMETANA` folder or by clicking [here](https://github.com/franciscozorrilla/unseenbio_metaGEM/blob/main/SMETANA/wgs_S2772Nr3_detailed.tsv). Summary files from intermediate results can be found under the `stats` folder.
 
 ### Wiki
 Please refer to the [metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki) for further documentation, tips & tricks, and FAQs.
