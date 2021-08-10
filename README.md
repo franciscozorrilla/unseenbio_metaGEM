@@ -107,18 +107,6 @@ We will visualize the output of individual binners after refinement and reassemb
 
 ### 4. Generate final bin sets using [metaWRAP](https://github.com/bxlab/metaWRAP) bin_refinement and bin_reassemble
 
-It is recommended to install metaWRAP in its own isolated conda environment. This can be done using conda install or based on the metaWRAP.yml conda recipie file found in the metaGEM repo:
-
-```
-# Install directly from conda
-conda create --name metawrap-env --channel ursky metawrap-mg=1.3.2
-
-# Alternatively install from conda recipie 
-conda env create -f metaWRAP_env.yml
-
-source activate metawrap-env
-```
-
 Refine & reassemble bin sets:
 
 ```
