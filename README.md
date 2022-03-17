@@ -92,8 +92,10 @@ The above barplots show that the assembly of sample wgs_S2772Nr1 contains ~324 m
 Using bwa and samtools, cross map each set of paired end reads against each set of assembled contigs to obtain abundances/coverage of contigs across samples. This information will be used by binners to attain best performance. Submit one job per sample, with 24 cores and 120 GB RAM each, with a maximum runtime of 24 hours:
 
 ```
-bash metaGEM.sh -t crossMap -j 2 -c 24 -m 120 -h 24
+bash metaGEM.sh -t crossMapSeries -j 2 -c 24 -m 120 -h 24
 ```
+
+Note: the old rule `crossMap` was split into `crossMapSeries` and `crossMapParallel`. Running the mappings in series is more straightforward, but may also become prohibitively expensive from a computational resource point of view for datasets with a large number of samples, e.g. N=1000.
 
 Run each of the binners using contig coverage across samples:
 
