@@ -5,6 +5,10 @@
 ### Objective
 Showcase how the metaGEM workflow can be used to predict metabolic interactions directly from metagenomic data from your own gut microbiome. Unseenbio test kits were sent for sequencing on September 28 & October 21 2020, resulting in two 101 bp paired end reads sets with IDs S2772Nr1 and S2772Nr3. You can find the predicted interactions under the `SMETANA` folder or by clicking [here](https://github.com/franciscozorrilla/unseenbio_metaGEM/blob/main/SMETANA/wgs_S2772Nr3_detailed.tsv). Summary files from intermediate results can be found under the `stats` folder.
 
+For a more advanced tutorial, check out the resources we put together for the [SymbNET: from metagenomics to metabolic interactions](https://www.ebi.ac.uk/training/events/symbnet-2022/) course in 2022.
+
+[![Tutorial2](https://img.shields.io/badge/SymbNET-Tutorial-red)](https://github.com/franciscozorrilla/SymbNET)
+
 ### Wiki
 Please refer to the [metaGEM wiki](https://github.com/franciscozorrilla/metaGEM/wiki) for further documentation, tips & tricks, and FAQs.
 
@@ -264,7 +268,7 @@ The top subplot in the figure above suggests that *Parasutterella excrementihomi
 ## Please cite
 
 ```
+Francisco Zorrilla, Filip Buric, Kiran R Patil, Aleksej Zelezniak
 metaGEM: reconstruction of genome scale metabolic models directly from metagenomes
-Francisco Zorrilla, Kiran R. Patil, Aleksej Zelezniak
-bioRxiv 2020.12.31.424982; doi: https://doi.org/10.1101/2020.12.31.424982 
+Nucleic Acids Research, Volume 49, Issue 21, 2 December 2021, Page e126, https://doi.org/10.1093/nar/gkab815
 ```
